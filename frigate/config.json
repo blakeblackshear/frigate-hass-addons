@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR",
-  "version": "1.0",
+  "version": "1.1",
   "panel_icon": "mdi:cctv",
   "slug": "frigate",
   "description": "NVR with realtime local object detection for IP cameras",
