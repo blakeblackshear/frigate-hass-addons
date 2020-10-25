@@ -1,3 +1,8 @@
+### 1.2
+
+- Update to 0.7.2
+- Support for PCI Coral devices
+
 ### 1.1
 
 - Update to 0.7.1
