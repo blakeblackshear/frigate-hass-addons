@@ -4,7 +4,7 @@
 
 NVR with realtime local object detection for IP cameras.
 
-[Configuration Reference](https://github.com/blakeblackshear/frigate/blob/master/config/config.example.yml)
+[Configuration Reference](https://github.com/blakeblackshear/frigate#configuration)
 
 [Frigate]: https://github.com/blakeblackshear/frigate
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
