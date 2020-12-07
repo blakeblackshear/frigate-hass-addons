@@ -1,0 +1,56 @@
+{
+  "name": "Frigate NVR Beta",
+  "version": "1.0",
+  "panel_icon": "mdi:cctv",
+  "slug": "frigate-beta",
+  "description": "NVR with realtime local object detection for IP cameras",
+  "url": "https://github.com/blakeblackshear/frigate",
+  "startup": "application",
+  "boot": "auto",
+  "webui": "http://[HOST]:[PORT:5000]/stats",
+  "watchdog": "http://[HOST]:[PORT:5000]/",
+  "ingress": true,
+  "ingress_port": 5000,
+  "ingress_entry": "/stats",
+  "ports": {
+    "5000/tcp": 5000,
+    "1935/tcp": 1935
+  },
+  "ports_description": {
+    "5000/tcp": "Web interface (Not required for Hass.io Ingress)",
+    "1935/tcp": "RTMP streams"
+  },
+  "host_network": false,
+  "devices": [
+    "/dev/bus/usb:/dev/bus/usb:rwm",
+    "/dev/dri/renderD128:/dev/dri/renderD128:rwm",
+    "/dev/apex_0:/dev/apex_0:rwm"
+  ],
+  "full_access": true,
+  "environment": {
+    "CONFIG_FILE": "/data/options.json"
+  },
+  "options": {
+    "detectors": {
+      "coral": {
+        "type": "edgetpu",
+        "device": "usb:0"
+      }
+    },
+    "mqtt": {
+      "host": "core-mosquitto.local.hass.io"
+    },
+    "ffmpeg": {},
+    "cameras": {}
+  },
+  "schema": false,
+  "services": ["mqtt:need"],
+  "arch": [
+    "amd64",
+    "armv7",
+    "aarch64"
+  ],
+  "map": [
+    "media:rw"
+  ]
+}
