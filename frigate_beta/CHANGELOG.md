@@ -1,3 +1,7 @@
+### 1.3
+
+- 0.8.0 Release Candidate 1
+
 ### 1.2
 
 - 0.8.0 Beta 3
