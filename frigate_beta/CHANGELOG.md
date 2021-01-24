@@ -1,3 +1,7 @@
+### 1.7
+
+- 0.8.0 Release Candidate 5
+
 ### 1.6
 
 - 0.8.0 Release Candidate 4
