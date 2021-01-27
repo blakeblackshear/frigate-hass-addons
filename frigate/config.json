@@ -7,16 +7,18 @@
   "url": "https://github.com/blakeblackshear/frigate",
   "startup": "application",
   "boot": "auto",
-  "webui": "http://[HOST]:[PORT:5000]/debug/stats",
+  "webui": "http://[HOST]:[PORT:5000]/",
   "watchdog": "http://[HOST]:[PORT:5000]/",
   "ingress": true,
   "ingress_port": 5000,
-  "ingress_entry": "/debug/stats",
+  "ingress_entry": "/",
   "ports": {
-    "5000/tcp": 5000
+    "5000/tcp": 5000,
+    "1935/tcp": 1935
   },
   "ports_description": {
-    "5000/tcp": "Web interface (Not required for Hass.io Ingress)"
+    "5000/tcp": "Web interface (Not required for Hass.io Ingress)",
+    "1935/tcp": "RTMP streams"
   },
   "host_network": false,
   "devices": [
@@ -29,15 +31,10 @@
     "CONFIG_FILE": "/data/options.json"
   },
   "options": {
-    "web_port": 5000,
     "detectors": {
       "coral": {
-        "type": "edgetpu",
-        "device": "usb:0"
+        "type": "cpu"
       }
-    },
-    "save_clips": {
-      "clips_dir": "/media/frigate"
     },
     "mqtt": {
       "host": "core-mosquitto.local.hass.io"
