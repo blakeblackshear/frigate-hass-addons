@@ -1,3 +1,6 @@
+### 1.5
+- Config fixes for 0.8.0
+
 ### 1.4 - MAJOR BREAKING CHANGES
 - Update to 0.8.0
 
