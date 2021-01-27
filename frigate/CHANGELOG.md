@@ -1,3 +1,6 @@
+### 1.4 - MAJOR BREAKING CHANGES
+- Update to 0.8.0
+
 ### 1.3
 
 - Update to 0.7.3
