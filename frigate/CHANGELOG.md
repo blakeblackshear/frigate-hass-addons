@@ -1,3 +1,8 @@
+### 1.6
+- Update to 0.8.1
+- Better ffmpeg log handling
+- WebUI fixes and improvements
+
 ### 1.5
 - Config fixes for 0.8.0
 
