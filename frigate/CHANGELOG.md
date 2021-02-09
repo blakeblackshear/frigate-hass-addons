@@ -1,3 +1,7 @@
+### 1.9
+- Update to avoid deprecation warning for new devices config
+- Skip version to reduce confusion about the beta being newer than stable
+
 ### 1.7
 - Fixes for supervisor 2021.02.5
 - Configuration moved to homeassistant config directory as `frigate.yml`
