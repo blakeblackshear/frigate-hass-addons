@@ -4,6 +4,8 @@
 
 NVR with realtime local object detection for IP cameras.
 
+You must create a config file as `frigate.yml` in the root of your HomeAssistant configuration directory.
+
 [Documentation](https://github.com/blakeblackshear/frigate)
 
 [Frigate]: https://github.com/blakeblackshear/frigate

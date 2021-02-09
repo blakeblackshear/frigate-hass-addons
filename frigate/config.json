@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR",
-  "version": "1.6",
+  "version": "1.7",
   "panel_icon": "mdi:cctv",
   "slug": "frigate",
   "description": "NVR with realtime local object detection for IP cameras",
@@ -28,21 +28,10 @@
   ],
   "full_access": true,
   "environment": {
-    "CONFIG_FILE": "/data/options.json"
+    "CONFIG_FILE": "/config/frigate.yml"
   },
-  "options": {
-    "detectors": {
-      "coral": {
-        "type": "cpu"
-      }
-    },
-    "mqtt": {
-      "host": "core-mosquitto.local.hass.io"
-    },
-    "ffmpeg": {},
-    "cameras": {}
-  },
-  "schema": false,
+  "options": {},
+  "schema": {},
   "services": ["mqtt:need"],
   "arch": [
     "amd64",

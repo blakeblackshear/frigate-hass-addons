@@ -1,3 +1,7 @@
+### 1.7
+- Fixes for supervisor 2021.02.5
+- Configuration moved to homeassistant config directory as `frigate.yml`
+
 ### 1.6
 - Update to 0.8.1
 - Better ffmpeg log handling
