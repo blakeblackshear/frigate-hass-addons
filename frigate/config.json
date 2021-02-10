@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR",
-  "version": "1.9",
+  "version": "1.10",
   "panel_icon": "mdi:cctv",
   "slug": "frigate",
   "description": "NVR with realtime local object detection for IP cameras",
@@ -23,7 +23,9 @@
   "host_network": false,
   "devices": [
     "/dev/dri/renderD128",
-    "/dev/apex_0"
+    "/dev/apex_0",
+    "/dev/dri/card0",
+    "/dev/vchiq"
   ],
   "usb": true,
   "full_access": true,

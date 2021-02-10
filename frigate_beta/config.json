@@ -23,7 +23,9 @@
   "host_network": false,
   "devices": [
     "/dev/dri/renderD128",
-    "/dev/apex_0"
+    "/dev/apex_0",
+    "/dev/dri/card0",
+    "/dev/vchiq"
   ],
   "usb": true,
   "full_access": true,
@@ -51,6 +53,7 @@
     "aarch64"
   ],
   "map": [
-    "media:rw"
+    "media:rw",
+    "config:rw"
   ]
 }

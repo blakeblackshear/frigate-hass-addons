@@ -1,3 +1,7 @@
+### 1.10
+- Update device config to avoid protection mode to be disabled for Coral access
+- Add additional devices in hopes that protection mode can be enabled on RPi with hwaccel
+
 ### 1.9
 - Update to avoid deprecation warning for new devices config
 - Skip version to reduce confusion about the beta being newer than stable
