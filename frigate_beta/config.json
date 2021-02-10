@@ -22,11 +22,10 @@
   },
   "host_network": false,
   "devices": [
-    "/dev/bus/usb",
     "/dev/dri/renderD128",
     "/dev/apex_0"
   ],
-  "full_access": true,
+  "usb": true,
   "environment": {
     "CONFIG_FILE": "/data/options.json"
   },
