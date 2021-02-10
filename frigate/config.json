@@ -26,6 +26,7 @@
     "/dev/apex_0"
   ],
   "usb": true,
+  "full_access": true,
   "environment": {
     "CONFIG_FILE": "/config/frigate.yml"
   },
