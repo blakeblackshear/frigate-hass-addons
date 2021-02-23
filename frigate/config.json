@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR",
-  "version": "1.11",
+  "version": "1.12",
   "panel_icon": "mdi:cctv",
   "slug": "frigate",
   "description": "NVR with realtime local object detection for IP cameras",
@@ -28,6 +28,7 @@
     "/dev/vchiq"
   ],
   "usb": true,
+  "tmpfs": true,
   "full_access": true,
   "environment": {
     "CONFIG_FILE": "/config/frigate.yml"
