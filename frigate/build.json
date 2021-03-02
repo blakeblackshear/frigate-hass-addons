@@ -1,0 +1,7 @@
+{
+  "build_from": {
+    "armv7": "blakeblackshear/frigate:0.8.4-arm7",
+    "aarch64": "blakeblackshear/frigate:0.8.4-aarch64",
+    "amd64": "blakeblackshear/frigate:0.8.4-amd64"
+  }
+}
