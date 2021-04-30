@@ -24,12 +24,13 @@
   "devices": [
     "/dev/dri/renderD128",
     "/dev/apex_0",
+    "/dev/apex_1",
+    "/dev/apex_2",
     "/dev/dri/card0",
     "/dev/vchiq"
   ],
   "usb": true,
   "tmpfs": true,
-  "full_access": true,
   "environment": {
     "CONFIG_FILE": "/config/frigate.yml"
   },
