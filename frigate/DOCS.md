@@ -1,4 +1,4 @@
-You must create a config file as `frigate.yml` in the root of your HomeAssistant configuration directory.
+You must create a config file as `frigate.yml` in the root of your Home Assistant configuration directory.
 
 Frigate brings realtime object detection to any camera video feed supported by ffmpeg. More detailed docs are maintained [here](https://github.com/blakeblackshear/frigate).
 
