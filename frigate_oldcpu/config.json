@@ -1,0 +1,46 @@
+{
+  "name": "Frigate NVR (old x86_64 CPU without AVX)",
+  "version": "1.13.1",
+  "panel_icon": "mdi:cctv",
+  "slug": "frigate-oldcpu",
+  "description": "NVR with realtime local object detection for IP cameras",
+  "url": "https://github.com/blakeblackshear/frigate",
+  "startup": "application",
+  "boot": "auto",
+  "webui": "http://[HOST]:[PORT:5000]/",
+  "watchdog": "http://[HOST]:[PORT:5000]/",
+  "ingress": true,
+  "ingress_port": 5000,
+  "ingress_entry": "/",
+  "ports": {
+    "5000/tcp": 5000,
+    "1935/tcp": 1935
+  },
+  "ports_description": {
+    "5000/tcp": "Web interface (Not required for Hass.io Ingress)",
+    "1935/tcp": "RTMP streams"
+  },
+  "host_network": false,
+  "devices": [
+    "/dev/dri/renderD128",
+    "/dev/apex_0",
+    "/dev/dri/card0",
+    "/dev/vchiq"
+  ],
+  "usb": true,
+  "tmpfs": true,
+  "full_access": true,
+  "environment": {
+    "CONFIG_FILE": "/config/frigate.yml"
+  },
+  "options": {},
+  "schema": {},
+  "services": ["mqtt:need"],
+  "arch": [
+    "amd64"
+  ],
+  "map": [
+    "media:rw",
+    "config:rw"
+  ]
+}
