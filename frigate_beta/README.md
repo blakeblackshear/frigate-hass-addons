@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Frigate NVR Beta
+lukedukeus# Home Assistant Add-on: Frigate NVR Beta
 
 This is an old version. There is no current beta release. Please switch to the stable addon.
 

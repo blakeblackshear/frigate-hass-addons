@@ -1,4 +1,4 @@
-# Frigate Add-ons: The official repository
+lukedukeus# Frigate Add-ons: The official repository
 
 ## Installing
 In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add `https://github.com/blakeblackshear/frigate-hass-addons`.
