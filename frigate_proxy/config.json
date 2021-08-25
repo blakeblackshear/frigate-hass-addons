@@ -1,0 +1,36 @@
+{
+  "name": "Frigate NVR Proxy",
+  "version": "1.0",
+  "panel_icon": "mdi:cctv",
+  "slug": "frigate-proxy",
+  "description": "Proxy addon for Frigate",
+  "url": "https://github.com/blakeblackshear/frigate",
+  "startup": "application",
+  "boot": "auto",
+  "webui": "http://[HOST]:[PORT:5000]/",
+  "watchdog": "http://[HOST]:[PORT:5000]/",
+  "ingress": true,
+  "ingress_port": 5000,
+  "ingress_entry": "/",
+  "ports": {
+    "5000/tcp": 5000
+  },
+  "ports_description": {
+    "5000/tcp": "Web interface (Not required for Hass.io Ingress)"
+  },
+  "host_network": false,
+  "devices": [],
+  "usb": false,
+  "tmpfs": false,
+  "full_access": false,
+  "environment": {},
+  "options": {
+    "server": "frigate.local:5000"
+  },
+  "schema": {
+    "server": "match(^.+:\\d+$)"
+  },
+  "services": [],
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
+  "map": []
+}

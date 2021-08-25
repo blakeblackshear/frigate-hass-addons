@@ -1,0 +1,3 @@
+upstream backend {
+    server {{ .server }};
+}
