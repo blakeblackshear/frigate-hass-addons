@@ -1,6 +1,6 @@
 {
-  "name": "Frigate NVR Beta (outdated)",
-  "version": "1.8",
+  "name": "Frigate NVR Beta (0.9.0)",
+  "version": "2.0",
   "panel_icon": "mdi:cctv",
   "slug": "frigate-beta",
   "description": "NVR with realtime local object detection for IP cameras",
@@ -24,28 +24,19 @@
   "devices": [
     "/dev/dri/renderD128",
     "/dev/apex_0",
+    "/dev/apex_1",
+    "/dev/apex_2",
     "/dev/dri/card0",
     "/dev/vchiq"
   ],
   "usb": true,
+  "tmpfs": true,
   "full_access": true,
   "environment": {
-    "CONFIG_FILE": "/data/options.json"
+    "CONFIG_FILE": "/config/frigate.yml"
   },
-  "options": {
-    "detectors": {
-      "coral": {
-        "type": "edgetpu",
-        "device": "usb:0"
-      }
-    },
-    "mqtt": {
-      "host": "core-mosquitto.local.hass.io"
-    },
-    "ffmpeg": {},
-    "cameras": {}
-  },
-  "schema": false,
+  "options": {},
+  "schema": {},
   "services": ["mqtt:need"],
   "arch": [
     "amd64",
