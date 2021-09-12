@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR Beta (0.9.0)",
-  "version": "2.1",
+  "version": "2.2",
   "panel_icon": "mdi:cctv",
   "slug": "frigate-beta",
   "description": "NVR with realtime local object detection for IP cameras",
@@ -12,6 +12,7 @@
   "ingress": true,
   "ingress_port": 5000,
   "ingress_entry": "/",
+  "panel_admin": false,
   "ports": {
     "5000/tcp": 5000,
     "1935/tcp": 1935

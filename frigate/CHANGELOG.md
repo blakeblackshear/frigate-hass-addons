@@ -1,3 +1,7 @@
+### 1.14
+- Allow access to side panel for non-admins
+- Add additional apex devices
+
 ### 1.13
 - Update to 0.8.4
 

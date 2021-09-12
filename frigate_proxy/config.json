@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR Proxy",
-  "version": "1.0",
+  "version": "1.1",
   "panel_icon": "mdi:cctv",
   "slug": "frigate-proxy",
   "description": "Proxy addon for Frigate",
@@ -12,6 +12,7 @@
   "ingress": true,
   "ingress_port": 5000,
   "ingress_entry": "/",
+  "panel_admin": false,
   "ports": {
     "5000/tcp": 5000
   },

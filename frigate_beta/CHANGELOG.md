@@ -1,3 +1,8 @@
+### 2.2
+
+- 0.9.0 Release Candidate 3
+- Allow access to side panel for non-admins
+
 ### 2.1
 
 - 0.9.0 Release Candidate 2
