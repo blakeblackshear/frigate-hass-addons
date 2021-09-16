@@ -32,7 +32,7 @@
   ],
   "usb": true,
   "tmpfs": true,
-  "full_access": false,
+  "full_access": true,
   "environment": {
     "CONFIG_FILE": "/config/frigate.yml"
   },
