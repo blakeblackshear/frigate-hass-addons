@@ -26,10 +26,12 @@
   "full_access": false,
   "environment": {},
   "options": {
-    "server": "frigate.local:5000"
+    "server": "frigate.local:5000",
+    "proxy_url": "homeassistant.local:8123"
   },
   "schema": {
-    "server": "match(^.+:\\d+$)"
+    "server": "match(^.+:\\d+$)",
+    "proxy_url": "match(^.+:\\d+$)"
   },
   "services": [],
   "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
