@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR Proxy",
-  "version": "1.1",
+  "version": "1.2",
   "panel_icon": "mdi:cctv",
   "slug": "frigate-proxy",
   "description": "Proxy addon for Frigate",
