@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR Beta (0.9.0)",
-  "version": "2.4",
+  "version": "2.5",
   "panel_icon": "mdi:cctv",
   "slug": "frigate-beta",
   "description": "NVR with realtime local object detection for IP cameras",

@@ -1,3 +1,7 @@
+### 2.5
+
+- 0.9.0 Release Candidate 6
+
 ### 2.4
 
 - 0.9.0 Release Candidate 5
