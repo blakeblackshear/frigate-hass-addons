@@ -1,3 +1,6 @@
+### 1.15
+- Update to 0.9.0
+
 ### 1.14
 - Allow access to side panel for non-admins
 - Add additional apex devices
