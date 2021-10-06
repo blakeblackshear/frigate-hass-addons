@@ -1,3 +1,7 @@
+### 2.0
+- BREAKING CHANGES: Update to 0.9.1 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.9.1)
+- This also requires an update to the Home Assistant integration (custom component)
+
 ### 1.14
 - Allow access to side panel for non-admins
 - Add additional apex devices
