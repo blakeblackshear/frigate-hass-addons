@@ -1,8 +1,8 @@
 {
-  "name": "Frigate NVR",
+  "name": "Frigate NVR (Full Access)",
   "version": "2.0",
   "panel_icon": "mdi:cctv",
-  "slug": "frigate",
+  "slug": "frigate-fa",
   "description": "NVR with realtime local object detection for IP cameras",
   "url": "https://github.com/blakeblackshear/frigate",
   "startup": "application",
