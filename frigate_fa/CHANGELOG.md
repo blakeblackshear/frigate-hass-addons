@@ -1,3 +1,6 @@
+### 2.3
+- Set side panel name to Frigate
+
 ### 2.2
 - Update to 0.9.4 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.9.4)
 
