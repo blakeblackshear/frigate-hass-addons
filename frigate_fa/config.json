@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR (Full Access)",
-  "version": "2.0",
+  "version": "2.1",
   "panel_icon": "mdi:cctv",
   "slug": "frigate-fa",
   "description": "NVR with realtime local object detection for IP cameras",
@@ -28,7 +28,8 @@
     "/dev/apex_1",
     "/dev/apex_2",
     "/dev/dri/card0",
-    "/dev/vchiq"
+    "/dev/vchiq",
+    "/dev/video10"
   ],
   "usb": true,
   "tmpfs": true,
