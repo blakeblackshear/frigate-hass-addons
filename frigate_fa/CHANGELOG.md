@@ -1,3 +1,6 @@
+### 2.2
+- Update to 0.9.4 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.9.4)
+
 ### 2.1
 - Update to 0.9.3 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.9.3)
 - Add /dev/video10 to requested devices for hwaccel

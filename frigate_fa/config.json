@@ -1,6 +1,6 @@
 {
   "name": "Frigate NVR (Full Access)",
-  "version": "2.1",
+  "version": "2.2",
   "panel_icon": "mdi:cctv",
   "slug": "frigate-fa",
   "description": "NVR with realtime local object detection for IP cameras",
