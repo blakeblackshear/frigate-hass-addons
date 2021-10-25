@@ -7,7 +7,9 @@ RUN apt-get -qq update \
     && apt-get -qq install -y \
     python3 \
     python3-dev \
+    python3-numpy \
     python3-pip \
+    python3-pybind11 \
     build-essential cmake git pkg-config \
     curl unzip \
     swig libjpeg-dev zlib1g-dev \
@@ -15,7 +17,7 @@ RUN apt-get -qq update \
 
 FROM base as build_libedgetpu
 RUN git clone https://github.com/google-coral/libedgetpu.git
-RUN cd libedgetpu && git checkout 14eee1a076aa1af7ec1ae3c752be79ae2604a708
+RUN cd libedgetpu && git checkout release-grouper
 RUN echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" > /etc/apt/sources.list.d/bazel.list \
     && curl -s https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | apt-key add - \
     && apt-get -qq update \
@@ -25,19 +27,16 @@ RUN sed -i 's/"-msse4.2",//g' $HOME/.cache/bazel/*/*/external/coral_crosstool/cc
 RUN printf "build --copt=-march=native\nbuild --host_copt=-march=native\n" > ~/.bazelrc
 RUN cd /libedgetpu && make libedgetpu
 RUN apt-get -qq install debhelper
-RUN cd /libedgetpu && make deb
+RUN cd /libedgetpu && dpkg-buildpackage -rfakeroot -us -uc -tc -b
 
 FROM base as build_tflite
 RUN git clone https://github.com/tensorflow/tensorflow.git
-RUN cd tensorflow && git checkout 8ae2eecf4f70b5efb55a108f2b0000ea6cad3e05
-RUN pip3 install -U \
-    numpy \
-    pybind11
+RUN cd tensorflow && git checkout a4dfb8d1a71385bd6d122e4f27f86dcebb96712d # 2.5.0.post1 tag is missing a4dfb8d1a71385bd6d122e4f27f86dcebb96712d, got that commit hash from https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp38-cp38-linux_x86_64.whl
 RUN bash tensorflow/tensorflow/lite/tools/make/download_dependencies.sh
-RUN bash tensorflow/tensorflow/lite/tools/pip_package/build_pip_package.sh
+RUN bash tensorflow/tensorflow/lite/tools/pip_package/build_pip_package_with_cmake.sh
 
 FROM blakeblackshear/frigate:0.11.1
-COPY --from=build_libedgetpu /libedgetpu1-max_14.0_amd64.deb /
-RUN dpkg -i /libedgetpu1-max_14.0_amd64.deb
-COPY --from=build_tflite /tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3/dist/tflite_runtime-2.5.0-cp39-cp39-linux_x86_64.whl /wheels/
-RUN pip3 install --upgrade /wheels/tflite_runtime-2.5.0-cp39-cp39-linux_x86_64.whl
+COPY --from=build_libedgetpu /libedgetpu1-max_16.0_amd64.deb /
+RUN dpkg -i /libedgetpu1-max_16.0_amd64.deb
+COPY --from=build_tflite /tensorflow/tensorflow/lite/tools/pip_package/gen/tflite_pip/python3/dist/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl /wheels/
+RUN pip3 install --upgrade /wheels/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
