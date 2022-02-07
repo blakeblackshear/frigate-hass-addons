@@ -1,5 +1,5 @@
 name: Frigate NVR (Full Access) Beta (0.10.0)
-version: "3.3"
+version: "3.4"
 panel_icon: "mdi:cctv"
 slug: frigate-fa-beta
 description: NVR with realtime local object detection for IP cameras
