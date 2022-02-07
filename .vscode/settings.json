@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "*.yaml": "home-assistant"
-    }
+    },
+    "gitlens.advanced.blame.customArguments": ["--ignore-revs-file=.git-blame-ignore"],
 }
