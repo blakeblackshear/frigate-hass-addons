@@ -1,2 +1,2 @@
 ARG BUILD_ARCH
-FROM blakeblackshear/frigate:0.10.0-beta11-${BUILD_ARCH}
+FROM blakeblackshear/frigate:0.10.0-beta12-${BUILD_ARCH}

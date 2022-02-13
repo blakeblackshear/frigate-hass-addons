@@ -1,3 +1,7 @@
+### 3.7
+
+- 0.10.0 Beta 12 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.10.0-beta12)
+
 ### 3.6
 
 - 0.10.0 Beta 11 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.10.0-beta11)
