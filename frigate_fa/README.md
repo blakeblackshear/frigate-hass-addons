@@ -8,7 +8,7 @@ NVR with realtime local object detection for IP cameras.
 
 You must create a config file as `frigate.yml` in the root of your Home Assistant configuration directory.
 
-This version of the add-on requests full device access, in order to turn off protection mode for those devices which don't work with protection mode enabled.
+This version of the add-on requests full device access in order to turn off protection mode for those devices which don't work with protection mode enabled.
 
 [Documentation](https://docs.frigate.video)
 
