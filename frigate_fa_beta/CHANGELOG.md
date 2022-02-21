@@ -1,3 +1,9 @@
+### 4.0
+
+Special early release to fix hardware acceleration for Raspberry Pi 64bit users.
+
+- 0.11.0 Beta 1 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.0-beta1)
+
 ### 3.8
 
 - 0.10.0 Release Candidate 1 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.10.0-rc1)
