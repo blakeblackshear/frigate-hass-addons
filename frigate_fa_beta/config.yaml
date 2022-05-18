@@ -1,5 +1,5 @@
 name: Frigate NVR (Full Access) Beta (0.11.0)
-version: 0.11.0-beta1
+version: 0.11.0-beta2
 panel_icon: "mdi:cctv"
 slug: frigate-fa-beta
 description: NVR with realtime local object detection for IP cameras
@@ -20,16 +20,6 @@ ports_description:
   5000/tcp: Web interface (Not required for Hass.io Ingress)
   1935/tcp: RTMP streams
 host_network: false
-devices:
-  - /dev/dri/renderD128
-  - /dev/apex_0
-  - /dev/apex_1
-  - /dev/apex_2
-  - /dev/apex_3
-  - /dev/dri/card0
-  - /dev/vchiq
-  - /dev/video10
-usb: true
 tmpfs: true
 full_access: true
 environment:
@@ -41,6 +31,7 @@ services:
 arch:
   - amd64
   - aarch64
+  - armv7
 map:
   - "media:rw"
   - "config:rw"

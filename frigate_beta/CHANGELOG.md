@@ -1,3 +1,7 @@
+### 0.11.0-beta2
+
+- 0.11.0 Beta 2 [Release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.0-beta2)
+
 ### 0.11.0-beta1
 
 - Special early release to fix hardware acceleration for Raspberry Pi 64bit users.
