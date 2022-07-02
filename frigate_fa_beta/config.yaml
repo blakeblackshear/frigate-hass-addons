@@ -1,5 +1,5 @@
 name: Frigate NVR (Full Access) Beta (0.11.0)
-version: 0.11.0-beta4
+version: 0.11.0-beta5
 panel_icon: "mdi:cctv"
 slug: frigate-fa-beta
 description: NVR with realtime local object detection for IP cameras
@@ -24,8 +24,8 @@ tmpfs: true
 full_access: true
 environment:
   CONFIG_FILE: /config/frigate.yml
-options: {}
-schema: {}
+schema:
+  plus_api_key: password?
 services:
   - "mqtt:need"
 arch:
