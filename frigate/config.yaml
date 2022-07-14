@@ -1,4 +1,4 @@
-name: Frigate NVR
+name: Frigate
 version: "3.1"
 panel_icon: "mdi:cctv"
 panel_title: Frigate

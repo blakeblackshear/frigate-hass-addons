@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Frigate NVR
+# Home Assistant Add-on: Frigate
 
 Please reference the [release notes](https://github.com/blakeblackshear/frigate/releases) for breaking changes.
 
