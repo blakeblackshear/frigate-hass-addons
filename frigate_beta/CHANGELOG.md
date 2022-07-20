@@ -1,3 +1,7 @@
+### 0.11.0-beta6
+
+- 0.11.0 Beta 6 [Release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.0-beta6)
+
 ### 0.11.0-beta5
 
 - 0.11.0 Beta 5 [Release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.0-beta5)
