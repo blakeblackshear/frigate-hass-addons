@@ -1,3 +1,8 @@
+### 0.11.0-rc1
+
+- 0.11.0 RC1 [Release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.0-rc1)
+- Fix "Send to Frigate+" for addon users
+
 ### 0.11.0-beta7
 
 - 0.11.0 Beta 7 [Release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.0-beta7)
