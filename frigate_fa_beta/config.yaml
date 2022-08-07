@@ -3,7 +3,7 @@ version: 0.11.0-rc1
 panel_icon: "mdi:cctv"
 slug: frigate-fa-beta
 description: NVR with realtime local object detection for IP cameras
-url: "https://github.com/blakeblackshear/frigate"
+url: "https://github.com/blakeblackshear/frigate-hass-addons"
 image: blakeblackshear/frigate
 startup: application
 boot: auto
