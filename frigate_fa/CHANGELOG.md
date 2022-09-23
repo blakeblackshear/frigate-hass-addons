@@ -1,4 +1,5 @@
 ### 0.11.0
+- If the upgrade fails with "Invalid build environment, can't build this add-on!". Try uninstalling and reinstalling the addon instead.
 - Update to 0.11.0 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.0)
 
 ### 3.1
