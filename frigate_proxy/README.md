@@ -6,7 +6,6 @@ This addon creates a proxy to a Frigate server run separately from Home Assistan
 
 Note that this addon does not run Frigate itself.
 
-[Frigate]: https://github.com/blakeblackshear/frigate
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
