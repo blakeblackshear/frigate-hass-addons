@@ -1,6 +1,7 @@
 name: Frigate NVR Beta (0.11.0)
-version: 0.11.0-rc2
+version: 0.11.0
 panel_icon: "mdi:cctv"
+panel_title: Frigate
 slug: frigate-beta
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/blakeblackshear/frigate"
