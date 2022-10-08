@@ -12,9 +12,6 @@ This version of the add-on requests full device access in order to turn off prot
 
 [Documentation](https://docs.frigate.video)
 
-[Frigate]: https://github.com/blakeblackshear/frigate
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[i386-shield]: https://img.shields.io/badge/i386-no-red.svg

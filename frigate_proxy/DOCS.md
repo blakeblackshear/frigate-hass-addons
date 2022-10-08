@@ -14,7 +14,9 @@ This must be in the format `host:port`. The following are valid examples:
 - `192.168.0.101:5000`
 
 ## Required Dependencies
+
 - Network access to running Frigate server
 
 ## Support
+
 Please [open an issue](https://github.com/blakeblackshear/frigate/issues/new/choose) if you need support.
