@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Frigate NVR (Full Access)
+# Home Assistant Add-on: Frigate (Full Access) Beta (0.11.0)
 
 Please reference the [release notes](https://github.com/blakeblackshear/frigate/releases) for breaking changes.
 

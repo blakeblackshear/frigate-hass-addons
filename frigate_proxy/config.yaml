@@ -1,4 +1,4 @@
-name: Frigate NVR Proxy
+name: Frigate Proxy
 version: "1.3"
 panel_icon: "mdi:cctv"
 panel_title: Frigate

@@ -1,4 +1,4 @@
-name: Frigate NVR (Full Access)
+name: Frigate (Full Access)
 version: 0.11.0
 panel_icon: "mdi:cctv"
 panel_title: Frigate
@@ -36,4 +36,3 @@ arch:
 map:
   - "media:rw"
   - "config:rw"
-
