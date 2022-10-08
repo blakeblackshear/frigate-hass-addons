@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Frigate NVR (Full Access) Beta (0.11.0)
+# Home Assistant Add-on: Frigate (Full Access) Beta (0.11.0)
 
 ![Supports aarch64 Architecture][aarch64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armv7 Architecture][armv7-shield]
 
