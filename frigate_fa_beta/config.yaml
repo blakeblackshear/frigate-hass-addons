@@ -8,6 +8,7 @@ url: "https://github.com/blakeblackshear/frigate"
 image: blakeblackshear/frigate
 startup: application
 boot: auto
+init: false
 webui: "http://[HOST]:[PORT:5000]/"
 watchdog: "http://[HOST]:[PORT:5000]/"
 ingress: true
