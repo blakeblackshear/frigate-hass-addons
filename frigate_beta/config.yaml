@@ -16,11 +16,13 @@ ingress_port: 5000
 ingress_entry: /
 panel_admin: false
 ports:
+  8555/tcp: null
   8554/tcp: null
   5000/tcp: null
   1984/tcp: null
   1935/tcp: null
 ports_description:
+  8555/tcp: WebRTC
   8554/tcp: RTSP Restream
   5000/tcp: Web interface (Not required for Hass.io Ingress)
   1984/tcp: go2rtc API
