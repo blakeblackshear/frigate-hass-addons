@@ -47,7 +47,7 @@ environment:
 schema:
   plus_api_key: password?
 services:
-  - "mqtt:need"
+  - "mqtt:want"
 arch:
   - amd64
   - aarch64
