@@ -1,5 +1,5 @@
 name: Frigate Beta (0.12.0)
-version: 0.12.0-beta6
+version: 0.12.0-beta7
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-beta
