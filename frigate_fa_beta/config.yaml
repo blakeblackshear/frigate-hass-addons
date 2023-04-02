@@ -33,6 +33,8 @@ ports_description:
   1935/tcp: RTMP streams
 host_network: false
 tmpfs: true
+usb: true
+video: true
 full_access: true
 privileged:
   - SYS_ADMIN
