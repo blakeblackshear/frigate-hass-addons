@@ -1,3 +1,7 @@
+### 0.12.0
+
+- Update to 0.12.0 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.12.0)
+
 ### 0.11.1
 
 - Update to 0.11.1 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.11.1)
