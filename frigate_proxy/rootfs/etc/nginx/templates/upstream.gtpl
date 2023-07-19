@@ -1,3 +1,0 @@
-upstream backend {
-    server {{ .server }};
-}

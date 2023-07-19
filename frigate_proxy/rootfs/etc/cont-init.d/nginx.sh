@@ -2,17 +2,14 @@
 # ==============================================================================
 # Configures NGINX for use with this add-on.
 # ==============================================================================
-declare server
+
+# Note the ^ at the beginning of the proxy_pass_host value
+# This stops bashio:var.json from passing the value as a string
 
 bashio::var.json \
     entry "$(bashio::addon.ingress_entry)" \
+    server "$(bashio::config 'server')" \
+    proxy_pass_host "^$(bashio::config 'proxy_pass_host')" \
     | tempio \
         -template /etc/nginx/templates/ingress.gtpl \
         -out /etc/nginx/servers/ingress.conf
-
-server=$(bashio::config 'server')
-
-echo '{"server":"'"$server"'"}' \
-    | tempio \
-        -template /etc/nginx/templates/upstream.gtpl \
-        -out /etc/nginx/includes/upstream.conf

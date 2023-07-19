@@ -1,3 +1,10 @@
+### 1.4
+
+- Add support for HTTPS upstream servers
+  Note the breaking change to configuration which requires the protocol to be
+  specified in the server configuration: `http://frigate.local:5000` instead of
+  `frigate.local:5000`.
+
 ### 1.3
 
 - Set side panel name to Frigate
