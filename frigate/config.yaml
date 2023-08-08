@@ -14,7 +14,7 @@ watchdog: "http://[HOST]:[PORT:5000]/"
 ingress: true
 ingress_port: 5000
 ingress_entry: /
-panel_admin: false
+panel_admin: true
 homeassistant_api: true
 hassio_api: true
 ports:
