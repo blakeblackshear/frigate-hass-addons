@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Frigate (Full Access) Beta (0.12.0)
+# Home Assistant Add-on: Frigate (Full Access) Beta (0.13.0)
 
 Please reference the [release notes](https://github.com/blakeblackshear/frigate/releases) for breaking changes.
 
