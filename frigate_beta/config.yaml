@@ -47,7 +47,7 @@ video: true
 tmpfs: true
 full_access: false
 privileged:
-  - SYS_ADMIN
+  - PERFMON
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
