@@ -1,8 +1,8 @@
-name: Frigate Beta (0.13.0)
-version: 0.13.0-beta6
+name: Frigate (Full Access) Beta (0.13.0)
+version: 0.13.0-beta6-rk
 panel_icon: "mdi:cctv"
 panel_title: Frigate
-slug: frigate-beta
+slug: frigate-rk-beta
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/blakeblackshear/frigate"
 image: ghcr.io/blakeblackshear/frigate
@@ -32,20 +32,10 @@ ports_description:
   1984/tcp: go2rtc API
   1935/tcp: RTMP streams
 host_network: false
-devices:
-  - /dev/dri/renderD128
-  - /dev/apex_0
-  - /dev/apex_1
-  - /dev/apex_2
-  - /dev/apex_3
-  - /dev/dri/card0
-  - /dev/vchiq
-  - /dev/video10
-  - /dev/video0
+tmpfs: true
 usb: true
 video: true
-tmpfs: true
-full_access: false
+full_access: true
 privileged:
   - PERFMON
 environment:
