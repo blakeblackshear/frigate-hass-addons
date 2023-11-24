@@ -14,6 +14,7 @@ Or, in your Home Assistant, navigate to _Configuration_ > _Add-ons, Backups & Su
 - [Frigate (Full Access)](frigate_fa/README.md)
 - [Frigate Beta](frigate_beta/README.md)
 - [Frigate (Full Access) Beta](frigate_fa_beta/README.md)
+- [Frigate Rockchip Beta](frigate_rk_beta/README.md)
 - [Frigate Proxy](frigate_proxy/README.md)
 
 NVR with realtime local object detection for IP cameras
