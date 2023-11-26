@@ -1,4 +1,4 @@
-name: Frigate (Full Access) Beta (0.13.0)
+name: Frigate Rockchip Beta (0.13.0)
 version: 0.13.0-beta6-rk
 panel_icon: "mdi:cctv"
 panel_title: Frigate
@@ -17,6 +17,7 @@ ingress_entry: /
 panel_admin: false
 homeassistant_api: true
 hassio_api: true
+devicetree: true
 ports:
   8555/tcp: 8555
   8555/udp: 8555
@@ -45,9 +46,7 @@ schema:
 services:
   - "mqtt:want"
 arch:
-  - amd64
   - aarch64
-  - armv7
 map:
   - "media:rw"
   - "config:rw"
