@@ -37,7 +37,7 @@ usb: true
 video: true
 full_access: true
 privileged:
-  - PERFMON
+  - SYS_ADMIN
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
