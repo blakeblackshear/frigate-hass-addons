@@ -1,5 +1,5 @@
 name: Frigate Proxy
-version: "1.3"
+version: "1.4"
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-proxy
@@ -24,9 +24,11 @@ tmpfs: false
 full_access: false
 environment: {}
 options:
-  server: "frigate.local:5000"
+  server: "http://frigate.local:5000"
+  proxy_pass_host: true
 schema:
-  server: "match(^.+:\\d+$)"
+  server: "match(^https?://.+:\\d+$)"
+  proxy_pass_host: bool
 services: []
 arch:
   - aarch64
