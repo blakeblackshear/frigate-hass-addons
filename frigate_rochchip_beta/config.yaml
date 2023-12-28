@@ -1,5 +1,5 @@
 name: Frigate Rockchip Beta (0.13.0)
-version: 0.13.0-beta6-rk
+version: 0.13.0-beta7-rk
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-rk-beta
