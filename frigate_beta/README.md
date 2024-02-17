@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Frigate Beta (0.13.0)
+# Home Assistant Add-on: Frigate Beta
 
 Please reference the [release notes](https://github.com/blakeblackshear/frigate/releases) for breaking changes.
 
