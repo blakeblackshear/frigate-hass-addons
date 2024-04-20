@@ -1,3 +1,7 @@
+### 1.5
+
+- Add `proxy_pass_real_ip` option
+
 ### 1.4
 
 - Add support for HTTPS upstream servers
