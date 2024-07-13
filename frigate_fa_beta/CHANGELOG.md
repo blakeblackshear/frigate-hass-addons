@@ -1,3 +1,7 @@
+### 0.14.0-beta4
+
+- Update to 0.14.0-beta4 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.14.0-beta4)
+
 ### 0.14.0-beta3
 
 - Update to 0.14.0-beta3 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.14.0-beta3)
