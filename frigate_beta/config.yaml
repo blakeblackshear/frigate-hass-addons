@@ -1,11 +1,7 @@
 name: Frigate Beta
-version: 0.14.0-rc1
+version: 0.14.0
 breaking_versions:
-  - 0.14.0-beta1
-  - 0.14.0-beta2
-  - 0.14.0-beta3
-  - 0.14.0-beta4
-  - 0.14.0-rc1  
+  - 0.14.0
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-beta
@@ -27,7 +23,7 @@ ports:
   8555/tcp: 8555
   8555/udp: 8555
   8554/tcp: null
-  8080/tcp: null
+  8971/tcp: null
   5000/tcp: null
   1984/tcp: null
   1935/tcp: null
@@ -35,7 +31,7 @@ ports_description:
   8555/tcp: WebRTC over tcp
   8555/udp: WebRTC over udp
   8554/tcp: RTSP Restream
-  8080/tcp: Authenticated Web interface
+  8971/tcp: Authenticated Web interface
   5000/tcp: Unauthenticated Web interface (Not required for Hass.io Ingress)
   1984/tcp: go2rtc API
   1935/tcp: RTMP streams
