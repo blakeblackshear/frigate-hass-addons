@@ -3,7 +3,7 @@ name: Docker
 
 on:
   schedule:
-    - cron: '16 15 * * *'
+    - cron: '0 0 */3 * *'
   push:
     branches: [ "frigate-oldcpu" ]
     
@@ -31,6 +31,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        
+      - name: Set up Python
+        # This is the version of the action for setting up Python, not the Python version.
+        uses: actions/setup-python@v5
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.x'
+          # Optional - x64 or x86 architecture, defaults to x64
+          architecture: 'x64'
+
+      - name: Install PyYaml
+        run: python -m pip install pyyaml
+
+      - name: Get version number
+        run: python -c "import yaml; import os; env_file=os.getenv('GITHUB_ENV'); version = yaml.safe_load(open('frigate_oldcpu/config.yaml', 'r')); ver_num = version['version']; open('env_file', 'a').write(f'VERSION_NUM={ver_num}')"
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -65,6 +80,7 @@ jobs:
           context: ./frigate_oldcpu
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
+            ghcr.io/crazypersonalph/frigate_oldcpu:${{ env.VERSION_NUM }}
             ghcr.io/crazypersonalph/frigate_oldcpu:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
