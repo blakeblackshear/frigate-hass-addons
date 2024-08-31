@@ -14,7 +14,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: Crazypersonalph/frigate_oldcpu
 
 
 jobs:
@@ -65,7 +65,7 @@ jobs:
           context: ./frigate_oldcpu
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            Crazypersonalph/frigate_oldcpu:latest
+            ghcr.io/Crazypersonalph/frigate_oldcpu:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
