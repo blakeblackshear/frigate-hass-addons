@@ -5,10 +5,10 @@ on:
   schedule:
     - cron: '16 15 * * *'
   push:
-    branches: [ "frigate_oldcpu" ]
+    branches: [ "frigate-oldcpu" ]
     
   pull_request:
-    branches: [ "frigate_oldcpu" ]
+    branches: [ "frigate-oldcpu" ]
 
 env:
   # Use docker.io for Docker Hub if empty
