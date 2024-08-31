@@ -5,6 +5,11 @@ name: Docker
 # separate terms of service, privacy policy, and support
 # documentation.
 
+
+defaults:
+  run:
+    working-directory: ./frigate_oldcpu
+
 on:
   schedule:
     - cron: '34 11 * * *'
@@ -33,9 +38,6 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
 
-    defaults:
-      run:
-        working-directory: ./frigate_oldcpu
 
 
     steps:
