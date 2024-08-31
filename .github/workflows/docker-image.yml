@@ -46,7 +46,7 @@ jobs:
 
       - name: Get version number
         id: envvars
-        run: python -c "import yaml; import os; env_file=os.getenv('GITHUB_ENV'); version = yaml.safe_load(open('frigate_oldcpu/config.yaml', 'r')); ver_num = version['version']; open('env_file', 'a').write(f'VERSION_NUM=ghcr.io/crazypersonalph/frigate_oldcpu:{ver_num}'); print(ver_num);"
+        run: python -c "import yaml; import os; env_file=os.getenv('GITHUB_ENV'); version = yaml.safe_load(open('frigate_oldcpu/config.yaml', 'r')); ver_num = version['version']; open('env_file', 'a').write(f'VERSION_NUM=ghcr.io/crazypersonalph/frigate_oldcpu:{ver_num}'); print(open('env_file', 'a'));"
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -80,7 +80,9 @@ jobs:
         with:
           context: ./frigate_oldcpu
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.envvars.outputs.VERSION_NUM }} , ghcr.io/crazypersonalph/frigate_oldcpu:latest
+          tags: |
+            ${{ env.VERSION_NUM }}
+            ghcr.io/crazypersonalph/frigate_oldcpu:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
