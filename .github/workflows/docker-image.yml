@@ -45,7 +45,7 @@ jobs:
         run: python -m pip install pyyaml
 
       - name: Get version number
-        run: python -c "import yaml; import os; env_file=os.getenv('GITHUB_ENV'); version = yaml.safe_load(open('frigate_oldcpu/config.yaml', 'r')); ver_num = version['version']; open('env_file', 'a').write(f'VERSION_NUM={ver_num}')"
+        run: python -c "import yaml; import os; env_file=os.getenv('GITHUB_ENV'); version = yaml.safe_load(open('frigate_oldcpu/config.yaml', 'r')); ver_num = version['version']; open('env_file', 'a').write(f'VERSION_NUM=ghcr.io/crazypersonalph/frigate_oldcpu:{ver_num}')"
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -79,9 +79,7 @@ jobs:
         with:
           context: ./frigate_oldcpu
           push: ${{ github.event_name != 'pull_request' }}
-          tags: |
-            ghcr.io/crazypersonalph/frigate_oldcpu:${{ env.VERSION_NUM }}
-            ghcr.io/crazypersonalph/frigate_oldcpu:latest
+          tags: ${{ env.VERSION_NUM }} , ghcr.io/crazypersonalph/frigate_oldcpu:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
