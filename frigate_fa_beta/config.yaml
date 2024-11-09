@@ -46,8 +46,8 @@ privileged:
   - PERFMON
 environment:
   CONFIG_FILE: /config/frigate.yml
-  HSA_OVERRIDE_GFX_VERSION: 9.0.0  
-  LIBVA_DRIVER_NAME: radeonsi 
+  HSA_OVERRIDE_GFX_VERSION: 9.0.0
+  LIBVA_DRIVER_NAME: radeonsi
 schema:
   plus_api_key: password?
 services:
