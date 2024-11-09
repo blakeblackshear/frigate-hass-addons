@@ -47,8 +47,13 @@ privileged:
 environment:
   CONFIG_FILE: /config/frigate.yml
   HSA_OVERRIDE_GFX_VERSION: 9.0.0  
-  HSA_ENABLE_SDMA: 0 
   LIBVA_DRIVER_NAME: radeonsi 
+  HCC_SERIALIZE_KERNEL: 3
+  HCC_SERIALIZE_COPY: 3
+  HSA_ENABLE_SDMA: 0
+  HSA_ENABLE_INTERRUPT: 0
+  HSA_SVM_GUARD_PAGES: 0
+  HSA_DISABLE_CACHE: 1
 schema:
   plus_api_key: password?
 services:
