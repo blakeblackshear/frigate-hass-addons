@@ -1,4 +1,4 @@
-name: Frigate (Full Access) Beta Rocm
+name: Frigate (Full Access) Beta Rocm-1
 version: 0.15.0-beta1-rocm
 breaking_versions:
   - 0.15.0-beta1-rocm
