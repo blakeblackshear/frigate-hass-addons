@@ -1,4 +1,4 @@
-This is the Hailo variant of the beta addon for the bleeding edge releases of Frigate. Please reference the [release notes](https://github.com/blakeblackshear/frigate/releases) for breaking changes.
+This is the Hailo variant of the addon for the stable releases of Frigate. Please reference the [release notes](https://github.com/blakeblackshear/frigate/releases) for breaking changes.
 
 You must create a config file as `frigate.yml` in the root of your Home Assistant configuration directory.
 
