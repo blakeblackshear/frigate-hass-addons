@@ -1,6 +1,7 @@
 name: Frigate HailoRT Beta
-version: 0.15.0-rc2-h8l
+version: 0.15.0-h8l
 breaking_versions:
+  - 0.15.0-h8l
   - 0.15.0-rc2-h8l
   - 0.15.0-rc1-h8l
   - 0.15.0-beta5-h8l
