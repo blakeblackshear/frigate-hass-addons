@@ -1,19 +1,10 @@
-name: Frigate (Full Access) Beta
-version: 0.15.0
+name: Frigate HailoRT
+version: 0.15.0-h8l
 breaking_versions:
-  - 0.15.0
-  - 0.15.0-rc2
-  - 0.15.0-rc1
-  - 0.15.0-beta5
-  - 0.15.0-beta4
-  - 0.15.0-beta3
-  - 0.15.0-beta2
-  - 0.15.0-beta1
-  - 0.14.1
-  - 0.14.0
+  - 0.15.0-h8l
 panel_icon: "mdi:cctv"
 panel_title: Frigate
-slug: frigate-fa-beta
+slug: frigate-hailo
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/blakeblackshear/frigate"
 image: ghcr.io/blakeblackshear/frigate
@@ -45,10 +36,22 @@ ports_description:
   1984/tcp: go2rtc API
   1935/tcp: RTMP streams
 host_network: false
-tmpfs: true
+devices:
+  - /dev/dri/renderD128
+  - /dev/apex_0
+  - /dev/apex_1
+  - /dev/apex_2
+  - /dev/apex_3
+  - /dev/dri/card0
+  - /dev/vchiq
+  - /dev/video10
+  - /dev/video0
+  - /dev/hailo0
+  - /dev/hailo1
 usb: true
 video: true
-full_access: true
+tmpfs: true
+full_access: false
 privileged:
   - PERFMON
 environment:
