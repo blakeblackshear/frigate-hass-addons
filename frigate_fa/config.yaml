@@ -36,7 +36,6 @@ ports_description:
   8971/tcp: Authenticated Web interface
   5000/tcp: Unauthenticated Web interface (Not required for Hass.io Ingress)
   1984/tcp: go2rtc API
-  1935/tcp: RTMP streams
 host_network: false
 tmpfs: true
 usb: true
