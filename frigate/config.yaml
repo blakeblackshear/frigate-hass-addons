@@ -53,8 +53,6 @@ tmpfs: true
 full_access: false
 privileged:
   - PERFMON
-environment:
-  CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
 services:
@@ -66,8 +64,8 @@ map:
   - type: media
     read_only: false
   - type: addon_config
-    read_only: false
     path: /config
-  # Previous config dir which is handled by a migration script
+    read_only: false
+  # Mount old config dir to be migrated by the image
   - type: homeassistant_config
     read_only: false

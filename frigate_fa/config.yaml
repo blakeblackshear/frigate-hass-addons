@@ -43,8 +43,6 @@ video: true
 full_access: true
 privileged:
   - PERFMON
-environment:
-  CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
 services:
@@ -53,5 +51,11 @@ arch:
   - amd64
   - aarch64
 map:
-  - "media:rw"
-  - "config:rw"
+  - type: media
+    read_only: false
+  - type: addon_config
+    path: /config
+    read_only: false
+  # Mount old config dir to be migrated by the image
+  - type: homeassistant_config
+    read_only: false
