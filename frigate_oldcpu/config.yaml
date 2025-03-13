@@ -29,7 +29,6 @@ ports_description:
   8554/tcp: RTSP Restream
   5000/tcp: Web interface (Not required for Hass.io Ingress)
   1984/tcp: go2rtc API
-  1935/tcp: RTMP streams
 host_network: false
 devices:
   - /dev/dri/renderD128

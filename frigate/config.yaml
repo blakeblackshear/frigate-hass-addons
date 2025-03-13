@@ -1,10 +1,11 @@
 name: Frigate
 # TODO: apply these changes after updating to 0.16.0:
 # https://github.com/blakeblackshear/frigate-hass-addons/pull/210
-version: 0.14.1
+version: 0.15.0
 breaking_versions:
   - 0.14.0
   - 0.14.1
+  - 0.15.0
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate
@@ -37,7 +38,6 @@ ports_description:
   8971/tcp: Authenticated Web interface
   5000/tcp: Unauthenticated Web interface (Not required for Hass.io Ingress)
   1984/tcp: go2rtc API
-  1935/tcp: RTMP streams
 host_network: false
 devices:
   - /dev/dri/renderD128

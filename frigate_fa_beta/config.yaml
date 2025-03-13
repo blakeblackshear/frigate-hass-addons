@@ -1,6 +1,7 @@
 name: Frigate (Full Access) Beta
-version: 0.15.0-rc2
+version: 0.15.0
 breaking_versions:
+  - 0.15.0
   - 0.15.0-rc2
   - 0.15.0-rc1
   - 0.15.0-beta5
@@ -42,7 +43,6 @@ ports_description:
   8971/tcp: Authenticated Web interface
   5000/tcp: Unauthenticated Web interface (Not required for Hass.io Ingress)
   1984/tcp: go2rtc API
-  1935/tcp: RTMP streams
 host_network: false
 tmpfs: true
 usb: true
