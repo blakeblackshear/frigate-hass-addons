@@ -58,11 +58,7 @@ arch:
   - amd64
   - aarch64
 map:
-  - type: media
-    read_only: false
-  - type: addon_config
-    path: /config
-    read_only: false
+  - "media:rw"
+  - "addon_config:rw"
   # Mount old config dir to be migrated by the image
-  - type: homeassistant_config
-    read_only: false
+  - "homeassistant_config:rw"

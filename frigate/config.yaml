@@ -65,11 +65,5 @@ arch:
   - amd64
   - aarch64
 map:
-  - type: media
-    read_only: false
-  - type: addon_config
-    read_only: false
-    path: /config
-  # Previous config dir which is handled by a migration script
-  - type: homeassistant_config
-    read_only: false
+  - "media:rw"
+  - "config:rw"
