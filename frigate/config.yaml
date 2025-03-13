@@ -1,4 +1,6 @@
 name: Frigate
+# TODO: apply these changes after updating to 0.16.0:
+# https://github.com/blakeblackshear/frigate-hass-addons/pull/210
 version: 0.14.1
 breaking_versions:
   - 0.14.0
@@ -53,6 +55,8 @@ tmpfs: true
 full_access: false
 privileged:
   - PERFMON
+environment:
+  CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
 services:
@@ -64,8 +68,8 @@ map:
   - type: media
     read_only: false
   - type: addon_config
-    path: /config
     read_only: false
-  # Mount old config dir to be migrated by the image
+    path: /config
+  # Previous config dir which is handled by a migration script
   - type: homeassistant_config
     read_only: false
