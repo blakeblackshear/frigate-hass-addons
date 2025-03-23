@@ -65,3 +65,4 @@ arch:
 map:
   - "media:rw"
   - "config:rw"
+  - "ssl"
