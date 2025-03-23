@@ -55,6 +55,8 @@ devices:
   - /dev/vchiq
   - /dev/video10
   - /dev/video0
+  - /dev/hailo0
+  - /dev/hailo1
 usb: true
 video: true
 tmpfs: true
