@@ -1,5 +1,5 @@
 name: Frigate
-version: 0.15.0
+version: 0.15.1
 breaking_versions:
   - 0.14.0
   - 0.14.1
