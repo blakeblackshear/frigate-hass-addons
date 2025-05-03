@@ -1,6 +1,7 @@
 name: Frigate Beta
-version: 0.15.0
+version: 0.16.0-beta1
 breaking_versions:
+  - 0.16.0-beta1
   - 0.15.0
   - 0.15.0-rc2
   - 0.15.0-rc1
@@ -54,14 +55,14 @@ devices:
   - /dev/vchiq
   - /dev/video10
   - /dev/video0
+  - /dev/hailo0
+  - /dev/hailo1
 usb: true
 video: true
 tmpfs: true
 full_access: false
 privileged:
   - PERFMON
-environment:
-  CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
 services:
@@ -71,4 +72,6 @@ arch:
   - aarch64
 map:
   - "media:rw"
-  - "config:rw"
+  - "addon_config:rw"
+  # Mount old config dir to be migrated by the image
+  - "homeassistant_config:rw"
