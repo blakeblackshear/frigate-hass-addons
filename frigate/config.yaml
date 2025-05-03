@@ -1,7 +1,7 @@
 name: Frigate
 # TODO: apply these changes after updating to 0.16.0:
 # https://github.com/blakeblackshear/frigate-hass-addons/pull/210
-version: 0.15.0
+version: 0.15.1
 breaking_versions:
   - 0.14.0
   - 0.14.1

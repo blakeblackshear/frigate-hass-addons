@@ -1,6 +1,6 @@
 name: Frigate HailoRT
 # TODO: delete this add-on variant after updating to 0.16.0
-version: 0.15.0-h8l
+version: 0.15.1-h8l
 breaking_versions:
   - 0.15.0-h8l
 panel_icon: "mdi:cctv"
