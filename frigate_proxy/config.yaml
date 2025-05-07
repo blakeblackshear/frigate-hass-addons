@@ -17,7 +17,7 @@ panel_admin: false
 ports:
   5000/tcp: 5000
 ports_description:
-  5000/tcp: Web interface (Not required for Hass.io Ingress)
+  5000/tcp: Web interface (not required for Home Assistant Ingress)
 host_network: false
 devices: []
 usb: false
