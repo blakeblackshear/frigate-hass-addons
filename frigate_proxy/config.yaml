@@ -1,5 +1,5 @@
 name: Frigate Proxy
-version: "1.5"
+version: 1.6
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-proxy
@@ -7,6 +7,7 @@ description: Proxy addon for Frigate
 url: "https://github.com/blakeblackshear/frigate"
 startup: application
 boot: auto
+init: false
 webui: "http://[HOST]:[PORT:5000]/"
 watchdog: "http://[HOST]:[PORT:5000]/"
 ingress: true
@@ -16,7 +17,7 @@ panel_admin: false
 ports:
   5000/tcp: 5000
 ports_description:
-  5000/tcp: Web interface (Not required for Hass.io Ingress)
+  5000/tcp: Web interface (not required for Home Assistant Ingress)
 host_network: false
 devices: []
 usb: false

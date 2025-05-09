@@ -27,7 +27,7 @@ ports_description:
   8555/tcp: WebRTC over tcp
   8555/udp: WebRTC over udp
   8554/tcp: RTSP Restream
-  5000/tcp: Web interface (Not required for Hass.io Ingress)
+  5000/tcp: Web interface (not required for Home Assistant Ingress)
   1984/tcp: go2rtc API
 host_network: false
 devices:
