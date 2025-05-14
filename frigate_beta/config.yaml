@@ -73,6 +73,7 @@ arch:
   - aarch64
 map:
   - "media:rw"
+  - "ssl"
   - "addon_config:rw"
   # Mount old config dir to be migrated by the image
   - "homeassistant_config:rw"
