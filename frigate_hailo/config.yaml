@@ -1,10 +1,15 @@
-name: Frigate (For old x86_64 CPU without AVX)
-version: 0.14.1
+name: Frigate HailoRT
+# TODO: delete this add-on variant after updating to 0.16.0
+version: 0.15.1-h8l
+breaking_versions:
+  - 0.15.1-h8l
+  - 0.15.0-h8l
 panel_icon: "mdi:cctv"
 panel_title: Frigate
-slug: frigate-oldcpu
+slug: frigate-hailo
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/blakeblackshear/frigate"
+image: ghcr.io/blakeblackshear/frigate
 startup: application
 boot: auto
 init: false
@@ -20,6 +25,7 @@ ports:
   8555/tcp: 8555
   8555/udp: 8555
   8554/tcp: null
+  8971/tcp: null
   5000/tcp: null
   1984/tcp: null
   1935/tcp: null
@@ -27,7 +33,8 @@ ports_description:
   8555/tcp: WebRTC over tcp
   8555/udp: WebRTC over udp
   8554/tcp: RTSP Restream
-  5000/tcp: Web interface (not required for Home Assistant Ingress)
+  8971/tcp: Authenticated Web interface
+  5000/tcp: Unauthenticated Web interface (not required for Home Assistant Ingress)
   1984/tcp: go2rtc API
 host_network: false
 devices:
@@ -40,12 +47,14 @@ devices:
   - /dev/vchiq
   - /dev/video10
   - /dev/video0
+  - /dev/hailo0
+  - /dev/hailo1
 usb: true
 video: true
 tmpfs: true
 full_access: false
 privileged:
-  - SYS_ADMIN
+  - PERFMON
 environment:
   CONFIG_FILE: /config/frigate.yml
 schema:
@@ -54,6 +63,7 @@ services:
   - "mqtt:want"
 arch:
   - amd64
+  - aarch64
 map:
   - "media:rw"
   - "config:rw"
