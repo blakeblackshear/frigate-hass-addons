@@ -1,6 +1,17 @@
 name: Frigate Beta
-version: 0.15.0-beta1
+version: 0.16.0-beta4
 breaking_versions:
+  - 0.16.0-beta4
+  - 0.16.0-beta3
+  - 0.16.0-beta2
+  - 0.16.0-beta1
+  - 0.15.0
+  - 0.15.0-rc2
+  - 0.15.0-rc1
+  - 0.15.0-beta5
+  - 0.15.0-beta4
+  - 0.15.0-beta3
+  - 0.15.0-beta2
   - 0.15.0-beta1
   - 0.14.1
   - 0.14.0
@@ -34,9 +45,8 @@ ports_description:
   8555/udp: WebRTC over udp
   8554/tcp: RTSP Restream
   8971/tcp: Authenticated Web interface
-  5000/tcp: Unauthenticated Web interface (Not required for Hass.io Ingress)
+  5000/tcp: Unauthenticated Web interface (not required for Home Assistant Ingress)
   1984/tcp: go2rtc API
-  1935/tcp: RTMP streams
 host_network: false
 devices:
   - /dev/dri/renderD128
@@ -48,14 +58,14 @@ devices:
   - /dev/vchiq
   - /dev/video10
   - /dev/video0
+  - /dev/hailo0
+  - /dev/hailo1
 usb: true
 video: true
 tmpfs: true
 full_access: false
 privileged:
   - PERFMON
-environment:
-  CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
 services:
@@ -65,4 +75,7 @@ arch:
   - aarch64
 map:
   - "media:rw"
-  - "config:rw"
+  - "ssl"
+  - "addon_config:rw"
+  # Mount old config dir to be migrated by the image
+  - "homeassistant_config:rw"

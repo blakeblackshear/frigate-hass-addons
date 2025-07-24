@@ -35,6 +35,8 @@ RUN cd tensorflow && git checkout v2.5.1
 RUN bash tensorflow/tensorflow/lite/tools/make/download_dependencies.sh
 RUN env BUILD_NUM_JOBS=$(($(grep -c "^processor" /proc/cpuinfo) / 2)) bash tensorflow/tensorflow/lite/tools/pip_package/build_pip_package_with_cmake.sh
 
+# TODO: apply these changes after updating to 0.16.0:
+# https://github.com/blakeblackshear/frigate-hass-addons/pull/210
 FROM ghcr.io/blakeblackshear/frigate:0.14.1
 COPY --from=build_libedgetpu /libedgetpu1-max_16.0_amd64.deb /
 RUN dpkg -i /libedgetpu1-max_16.0_amd64.deb

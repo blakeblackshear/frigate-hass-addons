@@ -1,3 +1,7 @@
+### 1.6
+
+- Refresh add-on with updated base image and nginx
+
 ### 1.5
 
 - Add `proxy_pass_real_ip` option
