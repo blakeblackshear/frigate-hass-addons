@@ -1,3 +1,7 @@
+### 0.16.0-rc2
+
+- Update to 0.16.0-rc2 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.16.0-rc2)
+
 ### 0.16.0-rc1
 
 - Update to 0.16.0-rc1 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.16.0-rc1)
