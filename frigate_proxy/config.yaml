@@ -18,7 +18,7 @@ ports:
   5000/tcp: 5000
 ports_description:
   5000/tcp: Web interface (not required for Home Assistant Ingress)
-host_network: false
+host_network: true
 devices: []
 usb: false
 tmpfs: false
