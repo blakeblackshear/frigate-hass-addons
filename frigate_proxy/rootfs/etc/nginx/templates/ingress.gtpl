@@ -13,11 +13,10 @@ server {
 
     # Handle each Frigate instance
     {{- range .instances }}
-    location {{ .path }}/ {
+    location ~ ^{{ .path }}(/.*)?$ {
         allow   172.30.32.2;
         deny    all;
-        rewrite ^{{ .path }}/(.*) /$1 break;
-        proxy_pass {{ .server }};
+        proxy_pass {{ .server }}$1$is_args$args;
         proxy_set_header X-Ingress-Path {{ $.entry }}{{ .path }};
 
         {{- if .proxy_pass_host }}
