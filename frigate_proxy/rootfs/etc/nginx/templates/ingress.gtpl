@@ -31,12 +31,6 @@ server {
         proxy_set_header X-Real-IP $remote_addr;
         {{- end }}
     }
-    location {{ .path }}/api/ {
-        allow   172.30.32.2;
-        deny    all;
-        proxy_pass {{ .server }}/api/;
-        include /etc/nginx/includes/proxy_params.conf;
-    }
     {{- end }}
     include /etc/nginx/includes/proxy_params.conf;
 
