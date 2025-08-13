@@ -17,6 +17,11 @@ server {
         deny    all;
         proxy_pass {{ .server }}/;
         include /etc/nginx/includes/proxy_params.conf;
+
+        # WebSocket support
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
     }
 
     location {{ .path }}/api/ {
@@ -26,6 +31,7 @@ server {
         include /etc/nginx/includes/proxy_params.conf;
     }
     {{- end }}
+}
 
         {{- if .proxy_pass_host }}
         proxy_set_header Host $http_host;
