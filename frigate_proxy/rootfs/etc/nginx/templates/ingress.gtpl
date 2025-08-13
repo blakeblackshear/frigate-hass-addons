@@ -3,21 +3,32 @@ server {
 
     include /etc/nginx/includes/server_params.conf;
 
-    location / {
+    # Serve landing page at root
+    location = / {
+        allow   172.30.32.2;
+        deny    all;
+        root /etc/nginx/html;
+        try_files /landing.html.gtpl =404;
+    }
+
+    # Handle each Frigate instance
+    {{ range $key, $instance := .instances }}
+    location {{ $instance.path }} {
         allow   172.30.32.2;
         deny    all;
 
-        proxy_pass {{ .server }};
-        proxy_set_header X-Ingress-Path {{ .entry }};
+        proxy_pass {{ $instance.server }};
+        proxy_set_header X-Ingress-Path {{ $.entry }}{{ $instance.path }};
 
-        {{ if .proxy_pass_host }}
-          proxy_set_header Host $http_host;
+        {{ if $instance.proxy_pass_host }}
+        proxy_set_header Host $http_host;
         {{ end }}
-        {{ if .proxy_pass_real_ip }}
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-          proxy_set_header X-Real-IP $remote_addr;
+        {{ if $instance.proxy_pass_real_ip }}
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Real-IP $remote_addr;
         {{ end }}
 
         include /etc/nginx/includes/proxy_params.conf;
     }
+    {{ end }}
 }
