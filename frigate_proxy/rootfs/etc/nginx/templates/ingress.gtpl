@@ -22,16 +22,6 @@ server {
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection $connection_upgrade;
-    }
-
-    location {{ .path }}/api/ {
-        allow   172.30.32.2;
-        deny    all;
-        proxy_pass {{ .server }}/api/;
-        include /etc/nginx/includes/proxy_params.conf;
-    }
-    {{- end }}
-}
 
         {{- if .proxy_pass_host }}
         proxy_set_header Host $http_host;
@@ -40,8 +30,14 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Real-IP $remote_addr;
         {{- end }}
-
+    }
+    location {{ .path }}/api/ {
+        allow   172.30.32.2;
+        deny    all;
+        proxy_pass {{ .server }}/api/;
         include /etc/nginx/includes/proxy_params.conf;
     }
     {{- end }}
+    include /etc/nginx/includes/proxy_params.conf;
+
 }
