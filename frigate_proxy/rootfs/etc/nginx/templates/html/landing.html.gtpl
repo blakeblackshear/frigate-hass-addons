@@ -34,7 +34,7 @@
     <div class="instance">
         <h2>{{ $instance.name }}</h2>
         <p>{{ $instance.description }}</p>
-        <a href="{{ $instance.path }}">Open Instance</a>
+        <a href="{{ $.entry }}{{ $instance.path }}">Open Instance</a>
     </div>
     {{ end }}
 </body>
