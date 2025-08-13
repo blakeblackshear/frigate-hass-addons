@@ -3,8 +3,8 @@ server {
 
     include /etc/nginx/includes/server_params.conf;
 
-    # Handle root path for landing page
-    location = / {
+    # Handle root path for landing page (/, //, /index.html)
+    location ~ ^/(|index.html)?$ {
         allow   172.30.32.2;
         deny    all;
         alias /etc/nginx/html/landing.html;
