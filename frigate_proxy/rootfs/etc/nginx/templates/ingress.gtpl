@@ -31,6 +31,4 @@ server {
         include /etc/nginx/includes/proxy_params.conf;
     }
     {{- end }}
-    }
-    {{ end }}
 }
