@@ -8,7 +8,7 @@ server {
         allow   172.30.32.2;
         deny    all;
         root /etc/nginx/html;
-        try_files /landing.html.gtpl =404;
+        try_files /landing.html =404;
     }
 
     # Handle each Frigate instance

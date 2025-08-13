@@ -1,0 +1,10 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Process landing page template
+# ==============================================================================
+
+# Process the landing page template
+tempio \
+    -conf /data/options.json \
+    -template /etc/nginx/templates/html/landing.html.gtpl \
+    -out /etc/nginx/html/landing.html
