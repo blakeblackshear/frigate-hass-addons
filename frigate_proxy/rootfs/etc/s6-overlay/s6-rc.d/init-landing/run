@@ -3,8 +3,14 @@
 # Process landing page template
 # ==============================================================================
 
+# Create HTML directory if it doesn't exist
+mkdir -p /etc/nginx/html
+
 # Process the landing page template
 tempio \
     -conf /data/options.json \
     -template /etc/nginx/templates/html/landing.html.gtpl \
     -out /etc/nginx/html/landing.html
+
+# Ensure proper permissions
+chmod 644 /etc/nginx/html/landing.html
