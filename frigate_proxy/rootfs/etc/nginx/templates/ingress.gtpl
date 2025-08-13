@@ -2,25 +2,30 @@ server {
     listen 5000 default_server;
 
     include /etc/nginx/includes/server_params.conf;
-    
-    # Remove potential double slashes
-    merge_slashes off;
 
-    # Serve landing page at root and for unmatched paths
+    # Handle root path for landing page
     location = / {
         allow   172.30.32.2;
         deny    all;
-        root /etc/nginx/html;
-        try_files /landing.html =404;
+        alias /etc/nginx/html/landing.html;
     }
 
     # Handle each Frigate instance
     {{- range .instances }}
-    location ~ ^/{{ trimPrefix "/" .path }}(/.*)?$ {
+    location {{ .path }}/ {
         allow   172.30.32.2;
         deny    all;
-        proxy_pass {{ .server }}$1$is_args$args;
-        proxy_redirect off;
+        proxy_pass {{ .server }}/;
+        include /etc/nginx/includes/proxy_params.conf;
+    }
+
+    location {{ .path }}/api/ {
+        allow   172.30.32.2;
+        deny    all;
+        proxy_pass {{ .server }}/api/;
+        include /etc/nginx/includes/proxy_params.conf;
+    }
+    {{- end }}
 
         {{- if .proxy_pass_host }}
         proxy_set_header Host $http_host;

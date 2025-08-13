@@ -34,7 +34,7 @@
     <div class="instance">
         <h2>{{ .name }}</h2>
         <p>{{ .description }}</p>
-        <a href="./{{ trimPrefix "/" .path }}" target="_self">Open Instance</a>
+        <a href="{{ .path }}/" target="_self">Open Instance</a>
     </div>
     {{- end }}
 </body>
