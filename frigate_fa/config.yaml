@@ -45,8 +45,6 @@ video: true
 full_access: true
 privileged:
   - PERFMON
-environment:
-  CONFIG_FILE: /config/frigate.yml
 schema:
   plus_api_key: password?
 services:
