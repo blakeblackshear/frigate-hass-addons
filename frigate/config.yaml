@@ -1,8 +1,7 @@
 name: Frigate
-# TODO: apply these changes after updating to 0.16.0:
-# https://github.com/blakeblackshear/frigate-hass-addons/pull/210
-version: 0.15.2
+version: 0.16.0
 breaking_versions:
+  - 0.16.0
   - 0.15.1
   - 0.15.0
   - 0.14.1
@@ -50,9 +49,8 @@ devices:
   - /dev/vchiq
   - /dev/video10
   - /dev/video0
-  # TODO: uncomment after updating to 0.16.0:
-  # - /dev/hailo0
-  # - /dev/hailo1
+  - /dev/hailo0
+  - /dev/hailo1
 usb: true
 video: true
 tmpfs: true
@@ -70,5 +68,6 @@ arch:
   - aarch64
 map:
   - "media:rw"
-  - "config:rw"
+  - "addon_config:rw"
+  = "homeassistant_config:rw"
   - "ssl"

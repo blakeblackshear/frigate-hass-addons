@@ -1,8 +1,7 @@
 name: Frigate (Full Access)
-# TODO: apply these changes after updating to 0.16.0:
-# https://github.com/blakeblackshear/frigate-hass-addons/pull/210
-version: 0.15.2
+version: 0.16.0
 breaking_versions:
+  - 0.16.0
   - 0.15.1
   - 0.15.0
   - 0.14.1
@@ -57,5 +56,6 @@ arch:
   - aarch64
 map:
   - "media:rw"
-  - "config:rw"
+  - "addon_config:rw"
+  = "homeassistant_config:rw"
   - "ssl"
