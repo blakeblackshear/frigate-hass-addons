@@ -54,7 +54,6 @@ ports_description:
   1984/tcp: go2rtc API
 host_network: false
 tmpfs: true
-usb: true
 video: true
 full_access: true
 privileged:
