@@ -23,6 +23,11 @@ server {
         proxy_pass {{ .server }}/;
         include /etc/nginx/includes/proxy_params.conf;
 
+        # Clear Ingress headers to prevent Frigate from auto-detecting the ingress path
+        # ignoring this allows us to fully control the rewriting via sub_filter
+        proxy_set_header X-Ingress-Path "";
+        proxy_set_header X-Forwarded-Prefix "";
+
         # Rewrite paths for Ingress
         sub_filter_once off;
         sub_filter_types *;
