@@ -1,6 +1,9 @@
 name: Frigate (Full Access) Beta
-version: 0.16.0-rc4
+version: 0.16.3
 breaking_versions:
+  - 0.16.3
+  - 0.16.2
+  - 0.16.1
   - 0.16.0-rc4
   - 0.16.0-rc3
   - 0.16.0-rc2
@@ -53,7 +56,6 @@ ports_description:
   1984/tcp: go2rtc API
 host_network: false
 tmpfs: true
-usb: true
 video: true
 full_access: true
 privileged:
