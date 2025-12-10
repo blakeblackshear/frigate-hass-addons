@@ -1,5 +1,5 @@
 name: Frigate Proxy
-version: 1.8.24
+version: 1.8.25
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-proxy
