@@ -29,6 +29,13 @@ server {
         sub_filter 'href="/' 'href="{{ $entry }}{{ .path }}/';
         sub_filter 'src="/' 'src="{{ $entry }}{{ .path }}/';
         sub_filter 'action="/' 'action="{{ $entry }}{{ .path }}/';
+        
+        # Javascript imports (Vite/ESM)
+        sub_filter 'from "/' 'from "{{ $entry }}{{ .path }}/';
+        
+        # CSS URL rewrites
+        sub_filter 'url("/' 'url("{{ $entry }}{{ .path }}/';
+        sub_filter "url('/" "url('{{ $entry }}{{ .path }}/";
 
         {{- if .proxy_pass_host }}
         proxy_set_header Host $http_host;
