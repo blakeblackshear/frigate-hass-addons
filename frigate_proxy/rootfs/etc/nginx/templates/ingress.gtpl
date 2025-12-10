@@ -1,9 +1,9 @@
 server {
     listen 5000 default_server;
+    absolute_redirect off;
 
     include /etc/nginx/includes/server_params.conf;
 
-    # Handle root path for landing page
     # Handle root path for landing page
     location = / {
         root /etc/nginx/html;
