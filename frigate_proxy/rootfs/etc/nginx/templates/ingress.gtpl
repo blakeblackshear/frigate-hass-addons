@@ -42,6 +42,17 @@ server {
         sub_filter 'url("/' 'url("{{ $entry }}{{ .path }}/';
         sub_filter "url('/" "url('{{ $entry }}{{ .path }}/";
 
+        # API & App rewrites (rewriting strings in JS bundles)
+        sub_filter '"/api' '"{{ $entry }}{{ .path }}/api';
+        sub_filter '"/ws' '"{{ $entry }}{{ .path }}/ws';
+        sub_filter '"/live' '"{{ $entry }}{{ .path }}/live';
+        sub_filter '"/vod' '"{{ $entry }}{{ .path }}/vod';
+        sub_filter '"/clips' '"{{ $entry }}{{ .path }}/clips';
+        sub_filter '"/recordings' '"{{ $entry }}{{ .path }}/recordings';
+        sub_filter '"/events' '"{{ $entry }}{{ .path }}/events';
+        sub_filter '"/export' '"{{ $entry }}{{ .path }}/export';
+        sub_filter '"/login' '"{{ $entry }}{{ .path }}/login';
+
         {{- if .proxy_pass_host }}
         proxy_set_header Host $http_host;
         {{- end }}
