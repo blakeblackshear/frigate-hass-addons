@@ -23,11 +23,6 @@ server {
         proxy_pass {{ .server }}/;
         include /etc/nginx/includes/proxy_params.conf;
 
-        # WebSocket support
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection $connection_upgrade;
-
         # Rewrite paths for Ingress
         sub_filter_once off;
         sub_filter_types *;
