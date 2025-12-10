@@ -4,9 +4,15 @@ server {
     include /etc/nginx/includes/server_params.conf;
 
     # Handle root path for landing page
+    # Handle root path for landing page
     location = / {
         root /etc/nginx/html;
+        {{- if eq (len .instances) 1 }}
+        {{- $target := index .instances 0 }}
+        return 302 {{ .entry }}{{ $target.path }}/;
+        {{- else }}
         try_files /landing.html /index.html =404;
+        {{- end }}
     }
 
     location = /index.html {
