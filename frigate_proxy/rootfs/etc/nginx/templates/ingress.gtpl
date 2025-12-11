@@ -6,6 +6,10 @@ server {
 
     # Handle root path for landing page
     location = / {
+        add_header Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0";
+        add_header Pragma "no-cache";
+        add_header Expires "0";
+
         root /etc/nginx/html;
         {{- if eq (len .instances) 1 }}
         {{- $target := index .instances 0 }}
