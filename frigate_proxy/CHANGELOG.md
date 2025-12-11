@@ -1,3 +1,15 @@
+### 1.7
+
+- Add support for multiple instances using the `instances` option  
+  If only one instance is specified, it will be redirected to automatically.  
+  Note the breaking change to configuration:
+  - `name` option to specify the name of the instance
+  - `description` option to specify the description of the instance
+  - `server` option to specify the server URL for the backend
+  - `path` option to specify the path in the ingress
+  - `default_path` optional option to specify the default path in Frigate, example: `review`
+
+
 ### 1.6
 
 - Refresh add-on with updated base image and nginx
