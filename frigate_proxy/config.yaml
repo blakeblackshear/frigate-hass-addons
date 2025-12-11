@@ -3,7 +3,7 @@ version: 1.7
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-proxy
-description: Proxy addon for multiple Frigate instances
+description: Proxy addon for one or more Frigate instances
 url: "https://github.com/blakeblackshear/frigate"
 startup: application
 boot: auto
