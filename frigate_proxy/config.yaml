@@ -1,5 +1,5 @@
 name: Frigate Proxy
-version: 1.8.26
+version: 1.8.27
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-proxy
@@ -28,6 +28,7 @@ schema:
       description: str
       server: str
       path: str
+      default_path: str?
       proxy_pass_host: bool
       proxy_pass_real_ip: bool
 host_network: false

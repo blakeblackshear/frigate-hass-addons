@@ -13,7 +13,7 @@ server {
         root /etc/nginx/html;
         {{- if eq (len .instances) 1 }}
         {{- $target := index .instances 0 }}
-        return 302 {{ .entry }}{{ $target.path }}/;
+        return 302 {{ .entry }}{{ $target.path }}/{{ if $target.default_path }}{{ $target.default_path }}{{ end }};
         {{- else }}
         try_files /landing.html /index.html =404;
         {{- end }}
