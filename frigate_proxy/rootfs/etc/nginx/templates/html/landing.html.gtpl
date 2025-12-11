@@ -14,8 +14,6 @@
         @media (prefers-color-scheme: dark) {
             :root {
                 --primary-color: #039be5;
-                --bg-color: #111111; /* Fallback/Base */
-                /* Home Assistant Theme colors - often available in ingress */
                 --bg-color: var(--primary-background-color, #111111);
                 --card-bg: var(--card-background-color, #1c1c1c);
                 --text-color: var(--primary-text-color, #e1e1e1);
@@ -33,10 +31,10 @@
         .instance {
             border: 1px solid var(--border-color);
             background-color: var(--card-bg);
-            padding: 1.5em; /* Increased padding */
+            padding: 1.5em;
             margin: 1em 0;
-            border-radius: 8px; /* Softer corners */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .instance h2 {
             margin-top: 0;
@@ -44,7 +42,7 @@
         }
         .instance p {
             color: var(--text-color);
-            opacity: 0.8; /* Slightly muted description */
+            opacity: 0.8;
             margin-bottom: 1.5em;
         }
         .instance a {
