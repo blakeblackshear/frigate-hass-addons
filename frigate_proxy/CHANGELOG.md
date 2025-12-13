@@ -1,14 +1,8 @@
 ### 1.7
 
-- Add support for multiple instances using the `instances` option  
-  If only one instance is specified, it will be redirected to automatically.  
-  Note the breaking change to configuration:
-  - `name` option to specify the name of the instance
-  - `description` option to specify the description of the instance
-  - `server` option to specify the server URL for the backend
-  - `path` option to specify the path in the ingress
-  - `default_path` optional option to specify the default path in Frigate, example: `review`
-
+- Add support for multiple instances with landing page when using the `additional_instances` option.  
+  Note that the default instance will now use the path `/main` instead of `/`.
+- Add `default_path` option to specify the default path in Frigate to land the user on (e.g. `/review`).
 
 ### 1.6
 

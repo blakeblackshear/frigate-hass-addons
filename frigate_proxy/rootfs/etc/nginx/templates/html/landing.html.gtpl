@@ -62,12 +62,31 @@
 </head>
 <body>
     <h1>Frigate Instances</h1>
+    {{- $server := .server }}
+    {{- $name := default "Main" .name }}
+    {{- $description := default "" .description }}
+    {{- $path := default "/" .path }}
+    {{- if and .additional_instances (eq $path "/") }}
+        {{- $path = "/main" }}
+    {{- end }}
+    {{- $default_path := .default_path }}
     {{- $entry := .entry }}
-    {{- range .instances }}
+    
+    {{- $instances := list }}
+    {{- if .server }}
+        {{- $instances = append $instances (dict "name" $name "description" $description "path" $path "default_path" $default_path) }}
+    {{- end }}
+    {{- range .additional_instances }}
+        {{- $instances = append $instances . }}
+    {{- end }}
+
+    {{- range $instances }}
     <div class="instance">
         <h2>{{ .name }}</h2>
+        {{- if .description }}
         <p>{{ .description }}</p>
-        <a href="{{ $entry }}{{ .path }}/{{ if .default_path }}{{ .default_path }}{{ end }}" target="_self">Open Instance</a>
+        {{- end }}
+        <a href="{{ $entry }}{{ if ne .path "/" }}{{ .path }}/{{ end }}{{ if .default_path }}{{ .default_path }}{{ end }}" target="_self">Open Instance</a>
     </div>
     {{- end }}
 </body>

@@ -15,22 +15,29 @@ ingress_port: 5000
 ingress_entry: /
 panel_admin: false
 options:
-  instances:
-    - name: "Main Frigate"
-      description: "Primary Frigate instance"
-      server: "http://frigate.local:5000"
-      path: "/main"
-      proxy_pass_host: true
-      proxy_pass_real_ip: true
+  server: "http://frigate.local:5000"
+  name: "Main Frigate"
+  description: ""
+  default_path: ""
+  proxy_pass_host: true
+  proxy_pass_real_ip: true
+  additional_instances: []
 schema:
-  instances:
+  server: "match(^https?://.+:\\d+$)"
+  name: str?
+  description: str?
+  path: str?
+  default_path: str?
+  proxy_pass_host: bool
+  proxy_pass_real_ip: bool
+  additional_instances:
     - name: str
-      description: str
+      description: str?
       server: "match(^https?://.+:\\d+$)"
       path: str
       default_path: str?
-      proxy_pass_host: bool
-      proxy_pass_real_ip: bool
+      proxy_pass_host: bool?
+      proxy_pass_real_ip: bool?
 host_network: false
 devices: []
 usb: false
