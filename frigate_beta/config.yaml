@@ -1,24 +1,9 @@
 name: Frigate Beta
-version: 0.16.0
+version: 0.17.0-beta2
 breaking_versions:
+  - 0.17.0-beta1
   - 0.16.0
-  - 0.16.0-rc4
-  - 0.16.0-rc3
-  - 0.16.0-rc2
-  - 0.16.0-rc1
-  - 0.16.0-beta4
-  - 0.16.0-beta3
-  - 0.16.0-beta2
-  - 0.16.0-beta1
   - 0.15.0
-  - 0.15.0-rc2
-  - 0.15.0-rc1
-  - 0.15.0-beta5
-  - 0.15.0-beta4
-  - 0.15.0-beta3
-  - 0.15.0-beta2
-  - 0.15.0-beta1
-  - 0.14.1
   - 0.14.0
 panel_icon: "mdi:cctv"
 panel_title: Frigate
