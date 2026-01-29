@@ -1,5 +1,5 @@
 name: Frigate
-version: 0.16.3
+version: 0.16.4
 breaking_versions:
   - 0.16.0
   - 0.15.0
@@ -57,6 +57,7 @@ privileged:
   - PERFMON
 schema:
   plus_api_key: password?
+  go2rtc_allow_arbitrary_exec: str?
 services:
   - "mqtt:want"
 arch:
