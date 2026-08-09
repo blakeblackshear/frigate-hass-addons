@@ -1,9 +1,9 @@
 name: Frigate Proxy
-version: 1.6
+version: 1.7
 panel_icon: "mdi:cctv"
 panel_title: Frigate
 slug: frigate-proxy
-description: Proxy addon for Frigate
+description: Proxy addon for one or more Frigate instances
 url: "https://github.com/blakeblackshear/frigate"
 startup: application
 boot: auto
@@ -14,24 +14,36 @@ ingress: true
 ingress_port: 5000
 ingress_entry: /
 panel_admin: false
-ports:
-  5000/tcp: 5000
-ports_description:
-  5000/tcp: Web interface (not required for Home Assistant Ingress)
+options:
+  server: "http://frigate.local:5000"
+  name: "Main Frigate"
+  description: ""
+  default_path: ""
+  proxy_pass_host: true
+  proxy_pass_real_ip: true
+  additional_instances: []
+schema:
+  server: "match(^https?://.+:\\d+$)"
+  name: str?
+  description: str?
+  path: str?
+  default_path: str?
+  proxy_pass_host: bool
+  proxy_pass_real_ip: bool
+  additional_instances:
+    - name: str
+      description: str?
+      server: "match(^https?://.+:\\d+$)"
+      path: str
+      default_path: str?
+      proxy_pass_host: bool?
+      proxy_pass_real_ip: bool?
 host_network: false
 devices: []
 usb: false
 tmpfs: false
 full_access: false
 environment: {}
-options:
-  server: "http://frigate.local:5000"
-  proxy_pass_host: true
-  proxy_pass_real_ip: true
-schema:
-  server: "match(^https?://.+:\\d+$)"
-  proxy_pass_host: bool
-  proxy_pass_real_ip: bool
 services: []
 arch:
   - aarch64
