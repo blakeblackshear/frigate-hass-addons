@@ -4,8 +4,10 @@ server {
     include /etc/nginx/includes/server_params.conf;
 
     location / {
-        allow   172.30.32.2;
-        deny    all;
+        allow  10.0.0.0/8; 
+        allow  172.16.0.0/12;
+        allow  192.168.0.0/16;
+        deny all;
 
         proxy_pass {{ .server }};
         proxy_set_header X-Ingress-Path {{ .entry }};
