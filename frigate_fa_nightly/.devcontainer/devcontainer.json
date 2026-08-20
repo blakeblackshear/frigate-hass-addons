@@ -1,0 +1,18 @@
+{
+	"name": "Home Assistant Add-Ons",
+	"context": "..",
+	"dockerFile": "Dockerfile",
+	"appPort": ["7123:8123", "7357:4357"],
+    "postStartCommand": "service docker start",
+	"runArgs": ["-e", "GIT_EDITOR=code --wait", "--privileged"],
+	"containerEnv": {
+		"WORKSPACE_DIRECTORY": "${containerWorkspaceFolder}"
+	},
+	"extensions": [
+		"timonwong.shellcheck",
+		"esbenp.prettier-vscode"
+	],
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	}
+}
