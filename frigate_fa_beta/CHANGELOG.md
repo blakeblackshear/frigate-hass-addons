@@ -1,3 +1,7 @@
+### 0.18.0-rc1
+
+- Update to 0.18.0-rc1 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.18.0-rc1)
+
 ### 0.18.0-beta3
 
 - Update to 0.18.0-beta3 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.18.0-beta3)

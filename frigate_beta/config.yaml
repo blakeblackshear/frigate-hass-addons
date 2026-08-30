@@ -1,5 +1,5 @@
 name: Frigate Beta
-version: 0.18.0-beta3
+version: 0.18.0-rc1
 breaking_versions:
   - 0.18.0-beta3
   - 0.18.0-beta2
