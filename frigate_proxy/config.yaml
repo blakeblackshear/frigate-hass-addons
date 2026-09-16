@@ -5,6 +5,7 @@ panel_title: Frigate
 slug: frigate-proxy
 description: Proxy addon for Frigate
 url: "https://github.com/blakeblackshear/frigate"
+image: "ghcr.io/blakeblackshear/frigate-proxy-{arch}"
 startup: application
 boot: auto
 init: false
