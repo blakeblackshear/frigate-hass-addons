@@ -4,12 +4,13 @@
 # Configures NGINX for use with this add-on.
 # ==============================================================================
 
-# Note the ^ at the beginning of the proxy_pass_host value
-# This stops bashio:var.json from passing the value as a string
-bashio::var.json \
-    entry "$(bashio::addon.ingress_entry)" \
-    server "$(bashio::config 'server')" \
-    proxy_pass_host "^$(bashio::config 'proxy_pass_host')" \
+# Get the ingress entry path
+ingress_entry=$(bashio::addon.ingress_entry)
+
+# Merge the ingress entry into the full configuration and process the template
+# We use jq to add the 'entry' field to the existing options.json
+jq --arg entry "${ingress_entry}" \
+    '. + {entry: $entry}' /data/options.json \
     | tempio \
         -template /etc/nginx/templates/ingress.gtpl \
         -out /etc/nginx/servers/ingress.conf
