@@ -1,0 +1,19 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Process landing page template
+# ==============================================================================
+
+# Create HTML directory if it doesn't exist
+mkdir -p /etc/nginx/html
+
+# Process the landing page template
+ingress_entry=$(bashio::addon.ingress_entry)
+
+jq --arg entry "${ingress_entry}" \
+    '. + {entry: $entry}' /data/options.json \
+    | tempio \
+        -template /etc/nginx/templates/html/landing.html.gtpl \
+        -out /etc/nginx/html/landing.html
+
+# Ensure proper permissions
+chmod 644 /etc/nginx/html/landing.html
