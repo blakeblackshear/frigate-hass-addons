@@ -1,3 +1,9 @@
+### 1.7
+
+- Add support for multiple instances with landing page when using the `additional_instances` option.  
+  Note that the default instance will now use the path `/main` instead of `/`.
+- Add `default_path` option to specify the default path in Frigate to land the user on (e.g. `/review`).
+
 ### 1.6
 
 - Refresh add-on with updated base image and nginx
