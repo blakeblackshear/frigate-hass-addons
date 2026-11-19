@@ -1,0 +1,55 @@
+name: 'Publish Home Assistant Add-on: frigate-proxy'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frigate_proxy/config.yaml'
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if version changed
+        id: version_check
+        if: github.event_name == 'push'
+        run: |
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            echo "New branch push. Proceeding."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif git diff ${{ github.event.before }} ${{ github.event.after }} -- frigate_proxy/config.yaml | grep -q '^+version:'; then
+            echo "Version changed. Proceeding."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Version unchanged. Skipping build."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Log in to GitHub Container Registry
+        if: github.event_name != 'push' || steps.version_check.outputs.changed == 'true'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        if: github.event_name != 'push' || steps.version_check.outputs.changed == 'true'
+        # Use 2025.09.0 to support armv7, i386, and armhf
+        uses: home-assistant/builder@2025.09.0
+        with:
+          args: |
+            --all \
+            --target frigate_proxy \
+            --docker-hub ghcr.io/${{ github.repository_owner }}
