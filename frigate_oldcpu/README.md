@@ -6,6 +6,11 @@ Please reference the [release notes](https://github.com/blakeblackshear/frigate/
 
 NVR with realtime local object detection for IP cameras.
 
+This add-on uses Frigate 0.16.4, the release recommended for CPUs without AVX in
+the [Frigate support discussion](https://github.com/blakeblackshear/frigate/discussions/22381).
+Hardware compatibility depends on the detector and CPU. The previous add-on
+built custom TensorFlow Lite and Coral libraries for older CPUs.
+
 You must create a config file as `config.yml` in your add-on configuration folder.
 
 [Documentation](https://docs.frigate.video)

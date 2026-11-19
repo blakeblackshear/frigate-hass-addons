@@ -1,3 +1,8 @@
+### 0.16.4
+
+- Use the published Frigate 0.16.4 image to avoid building against retired Debian 11 package repositories.
+- Adopt the 0.16 add-on configuration directory. Back up the configuration and database before upgrading.
+
 ### 0.14.1
 
 - Update to 0.14.1 [release notes](https://github.com/blakeblackshear/frigate/releases/tag/v0.14.1)
